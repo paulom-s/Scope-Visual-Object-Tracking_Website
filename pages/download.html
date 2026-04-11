@@ -24,31 +24,68 @@
                 <u>Scope Visual Object Tracking Software <span class="subtitle">/Download</span></u>
             </h1>
             
+                <p><i>Windows version and all-in-one executable files are under development (Only works on Linux).</i></p>
+                <p><i>
+                    For now, you need to go by the following instructions to run the Program using the Terminal. You can also install a development environment like Visual Studio Code wich can be easier
+                    (download the .deb file on the <a href="https://code.visualstudio.com/Download">VS Code Website</a> and run "sudo apt install [path_of_the_downloaded_file].deb" in your Terminal, snap installation will not work).
+                </i></p>
+                <p><i>Note: This tutorial is made for Ubuntu. It should work for Debian too, but I don't know for other Linux distribution.</i></p>
+
                 <h2>How to Install</h2>
-
                     <ul>
-                        
-                        <p><i>Windows version and all-in-one executable files are under development.
-                            For now, you need to install Visual Studio Code or a similar software and to go by the following instructions to run the Program. It only works on Linux.</i></p>
-
                         <li><h3>1<sup>st</sup> Step:</h3></li>
-                            <p>Install a development environment like Visual Studio Code (free and easy to use) and make sure you have Installed Python on your computer.
-                                You can also do it in the Linux Terminal but it's less simple to use.</p>
+                            <p>First, make sure Python is already set-up and updated on your computer by entering the following command in the Linux terminal (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install python3</code>
+                                <p><i>Note: You may have to enter your password to update Python. You should see "Already up to date" or "Updating"</i></p>
 
                         <li><h3>2<sup>nd</sup> Step:</h3></li>
-                            <p>Install git on your computer or the GitHub Extension on VS Code (you don't need to create an account).</p>
+                            <p>Install git on your computer with the following command (click to copy), or the GitHub Extension in VS Code (Extensions section on the left):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install git -y</code>
 
                         <li><h3>3<sup>rd</sup> Step:</h3></li>
-                            <p>Open a new terminal and enter this command to download and open the code (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">git clone https://github.com/paulom-s/Scope-Visual-Object-Tracking.git S-V-O-T && cd S-V-O-T && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && code .</code>
-                                <p><i>If it doesn't works, try "python" or "py" instead of "python3" and make sure VS Code (or other) and Python are both added to the PATH.</i></p>
-
+                            <p>Still in the Linux terminal, enter this command to give the program access to the USB ports (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo usermod -a -G dialout $USER</code>
+                            <p>And then restart your computer to apply.</p>
+                                
                         <li><h3>4<sup>th</sup> Step:</h3></li>
-                            <p>Open the "<i>/src</i>" folder and run "<i>__main__.py</i>" (arrow at the top) to launch the software or try the demo programs in the "<i>/demo</i>" folder.</p>
+                            <p><i>Note: If you have installed VS Code, enter the following command inside ("New Terminal" in the Terminal section at the top).</i></p>
+                            <p>Then, enter this command to download and open the code (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">git clone https://github.com/paulom-s/Scope-Visual-Object-Tracking.git S-V-O-T && cd S-V-O-T && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
+                                <p><i>If it doesn't works, try "python" or "py" instead of "python3" and make sure you have sucessfully installed git with "git --version" (it should give you a version number).</i></p>
 
+                        <li><h3>5<sup>th</sup> Step:</h3></li>
+                            <strong>If you have installed VS Code:</strong>
+                                <p>Enter "<i>code .</i>" in the VS Code Terminal and then open the "<i>/src</i>" folder and run "<i>__main__.py</i>" (arrow at the top) to launch the software or try the demo programs in the "<i>/demo</i>" folder (see Programs's Explanation).</p>
+                                
+                            <strong>If you want to run the programs in the Linux Terminal:</strong>
+                                <p>To run a Program, enter "<i>python3 [path_of_the_program].py</i>" (see Programs's Explanation).</p>
                     </ul>
 
-                <h2>Software Download</h2>
+                <h2>Programs's Explanation</h2>
+                    <p>
+                        When you enter the S-V-O-T folder (or open it in VS Code), you will see different folders: "<i>/.venv</i>", "<i>/data</i>", "<i>/demo</i>", "<i>/src</i>" and "<i>/tests</i>" (this one doesn't matter).
+                        You should also have three files: "<i>.gitignore</i>", "<i>README.md</i>" and "<i>requirements.txt</i>".
+                    </p>
+                    <p>The only things that you will use are the "<i>/demo</i>" and "<i>/src</i>" folders:</p>
+
+                    <ul>
+                        <li><h3><i>/demo</i></h3></li>
+                            <ul>
+                                <li><i>/Dependencies</i>: Dependencies Programs for the communication with the scope or the camera. You don't need to touch it.</li>
+                                <li><i>Com-Scope-Demo.py</i>: Program to test the communication with the scope. You need to connect it. You don't need your camera.</li>
+                                <li><i>Img-Analyzing-Demo.py</i>: Program to show the functioning of the image's analyzing. You don't need your camera or your scope.</li>
+                                <li><i>Program-No-Scope-Demo.py</i>: Demo of the software without neither the camera nor the scope.</li>
+                                <li><i>Program-w-Scope-Demo</i>: Demo of the software with the scope (pre-recorded video). You don't need your camera.</li>
+                            </ul>
+
+                        <li><h3><i>/src</i></h3></li>
+                            <ul>
+                                <li><i>/Dependencies</i>: Dependencies Programs for the communication with the scope or the camera. You don't need to touch it.</li>
+                                <li><i>__main.py__</i>: Main program, that's the one that starts the software.</li>
+                            </ul>
+                    </ul>
+
+                <h2>GitHub Download</h2>
                     <a href="https://github.com/paulom-s/Scope-Visual-Object-Tracking">Program Source Code (GitHub Repository)</a>
                     <p><i>If you want, you can see without downloading or install it manually with the link above (Source Code).</i></p>
  
