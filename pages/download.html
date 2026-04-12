@@ -34,34 +34,47 @@
                 <h2>How to Install</h2>
                     <ul>
                         <li><h3>1<sup>st</sup> Step:</h3></li>
-                            <p>Install / Update git on your computer with the following command (click to copy), or the GitHub Extension in VS Code (Extensions section on the left):</p>
+                            <p>Install / Update git on your computer with the following command (click to copy):</p>
                                 <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install git -y</code>
                                 <p><i>Note: You may have to enter your password. You should see "Installing" or "Already up to date".</i></p>
 
                         <li><h3>2<sup>nd</sup> Step:</h3></li>
+                            <p>Install / Update Virtual Environments packages for Python with the following command (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install -y python3.12-venv python3-pip</code>
+                                <p><i>Note: You should see "Installing" or "Already up to date".</i></p>
+
+                        <li><h3>3<sup>rd</sup> Step:</h3></li>
                             <p>Still in the Linux terminal, enter this command to give the program access to the USB ports (click to copy):</p>
                                 <code onclick="navigator.clipboard.writeText(this.innerText)">sudo usermod -a -G dialout $USER</code>
                             <p>And then restart your computer to apply.</p>
-
-                        <li><h3>3<sup>rd</sup> Step:</h3></li>
-                            <p>Install / Update Virtual Environments packages for Python with the following command (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install -y python3.12-venv</code>
-                                <p><i>Note: You may have to enter your password. You should see "Installing" or "Already up to date".</i></p>
                                 
                         <li><h3>4<sup>th</sup> Step:</h3></li>
                             <p>Then, enter this command to download and install the code (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">git clone https://github.com/paulom-s/Scope-Visual-Object-Tracking.git ~/Desktop/S-V-O-T && cd ~/Desktop/S-V-O-T && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
-                                <p><i>If it doesn't work, make sure you have sucessfully installed git with "git --version" (it should give you a version number).</i></p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">git clone https://github.com/paulom-s/Scope-Visual-Object-Tracking.git ~/Desktop/S-V-O-T &&
+                                    cd ~/Desktop/S-V-O-T && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
+                                <p><i>If it doesn't work, make sure you have successfully installed git with "git --version" (it should give you a version number).</i></p>
 
                         <li><h3>5<sup>th</sup> Step:</h3></li>
-                            <strong>If you have installed VS Code:</strong>
-                                <p>Enter "<i>code .</i>" in the Terminal to open the Program in VS Code and then open the "<i>/src</i>" folder and run "<i>__main__.py</i>" (arrow at the top) to launch the software or try the demo programs in the "<i>/demo</i>" folder (see Programs's Explanation).</p>
+                            <p><strong>If you have installed VS Code:</strong></p>
+                                <p>Enter "<i>code .</i>" in the Terminal to open the Program in VS Code and then close all windows.</p>
+
+                            <p><strong>If you want to run the programs in the Linux Terminal:</strong></p>
+                                <p>Close the Terminal.</p>
+
+                        <li><h3>Running a Program:</h3></li>
+                            <p>Note: Before running a program, ensure the Virtual Environment is active with this command (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && source .venv/bin/activate</code>
+                            <p>Enter it in the Linux or the VS Code terminal. You should see "<i>(.venv)</i>" at the start of the command line.</p>
+
+                            <p><strong>If you have installed VS Code:</strong></p>
+                                <p>Open VS Code, unroll the "<i>/src</i>" folder, click on the "<i>__main__.py</i>" and run it (arrow at the top) to launch the software
+                                    or try the demo programs in the "<i>/demo</i>" folder (see Programs's Explanation).</p>
                                 
                             <strong>If you want to run the programs in the Linux Terminal:</strong>
                                 <p>To run a Program, enter "<i>python3 [path_of_the_program].py</i>" (see Programs's Explanation).</p>
                         
                         <li><h3>Updating:</h3></li>
-                            <p>The software is still in development and is updated regularly. In order to always have the latest features or patches you can run this command (click to copy) to update the program each time you use it (updates nearly every 2 days):</p>
+                            <p>The software is still in development and is updated regularly. In order to always have the latest features or patches you can run this command regularly to update the program (click to copy):</p>
                                 <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && git pull origin main</code>
                                 <p><i>Note: You can enter it in both the Linux and VS Code terminal, it doesn't matter.</i></p>
                     </ul>
