@@ -34,8 +34,8 @@
                 <h2>How to Install</h2>
                     <ul>
                         <li><h3>1<sup>st</sup> Step:</h3></li>
-                            <p>Install / Update Git others dependencies with the following command (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install -y python3.12-venv python3-pip</code>
+                            <p>Install / Update Git and other dependencies with the following command (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install -y git python3.12-venv python3-pip</code>
                                 <p><i>Note: You may have to enter your password. You should see "Installing" or "Already up to date".</i></p>
 
                         <li><h3>2<sup>nd</sup> Step:</h3></li>
@@ -49,7 +49,7 @@
                                     cd ~/Desktop/S-V-O-T && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
                                 <p><i>If it doesn't work, make sure you have successfully installed git with "git --version" (it should give you a version number).</i></p>
 
-                        <li><h3>5<sup>th</sup> Step:</h3></li>
+                        <li><h3>4<sup>th</sup> Step:</h3></li>
                             <p><strong>If you have installed VS Code:</strong></p>
                                 <p>Enter "<i>code .</i>" in the Terminal to open the folder in VS Code.</p>
 
@@ -57,7 +57,7 @@
                             <p>The software is still in development and is updated regularly. In order to always have the latest features or patches you can run this command regularly to update the program (click to copy):</p>
                                 <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && git pull origin main</code>
                                 <p><i>Note: You can enter it in both the Linux and VS Code terminal, it doesn't matter.</i></p>
-                                
+
                         <li><h3>Running a Program:</h3></li>
                             <p>Note: Before running a program, ensure the Virtual Environment is active with this command (click to copy):</p>
                                 <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && source .venv/bin/activate</code>
@@ -65,14 +65,14 @@
 
                             <p><strong>If you have installed VS Code:</strong></p>
                                 <p>Open VS Code, expand the "<i>/src</i>" folder, click on the "<i>__main__.py</i>" and run it (arrow at the top) to launch the software
-                                    or try the demo programs in the "<i>/demo</i>" folder (see Programs's Explanation).</p>
+                                    or try the demo programs in the "<i>/demo</i>" folder (see Program Explanation).</p>
                                 
                             <strong>If you want to run the programs in the Linux Terminal:</strong>
                                 <p>To run a Program, enter "<i>python3 [path_of_the_program].py</i>".</p> 
-                                <p><u>Example:</u> "<i>python3 src/__main__.py</i>" (see Programs's Explanation).</p>
+                                <p><u>Example:</u> "<i>python3 src/__main__.py</i>" (see Program Explanation).</p>
                     </ul>
 
-                <h2>Programs's Explanation</h2>
+                <h2>Program Explanation</h2>
                     <p>
                         When you enter the S-V-O-T folder (or open it in VS Code), you will see different folders: "<i>/.venv</i>", "<i>/data</i>", "<i>/demo</i>", "<i>/src</i>" and "<i>/tests</i>" (this one doesn't matter).
                         You should also have three files: "<i>.gitignore</i>", "<i>README.md</i>" and "<i>requirements.txt</i>".
