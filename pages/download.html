@@ -57,7 +57,7 @@
                         
                         <li><h3>Installing the Software</h3></li>
                             <p>Then, enter this command to install the code (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">unzip -o ~/Downloads/S-V-O-T*.zip "S-V-O-T/*" -d ~/Desktop && rm ~/Downloads/S-V-O-T*.zip && cd ~/Desktop/S-V-O-T && python3 -m venv
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">unzip -o ~/Downloads/S-V-O-T*.zip -d ~/Desktop && mv ~/Desktop/S-V-O-T*/S-V-O-T ~/Desktop/ && rm ~/Desktop/S-V-O-T* && rm ~/Downloads/S-V-O-T*.zip && cd ~/Desktop/S-V-O-T && python3 -m venv
                                     .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
 
                             <p><strong>If you have installed VS Code:</strong></p>
