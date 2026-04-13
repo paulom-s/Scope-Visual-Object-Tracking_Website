@@ -23,56 +23,62 @@
             <h1>
                 <u>Scope Visual Object Tracking Software <span class="subtitle">/Download</span></u>
             </h1>
-            
+
+                <p><strong>🚨<a href="https://github.com/paulom-s/Scope-Visual-Object-Tracking/releases/tag/v0.1.0-alpha">First Release</a> Published ! See how to try it below.</strong></p>
+                
                 <p><i>Windows version and all-in-one executable files are under development (Only works on Linux).</i></p>
                 <p><i>
-                    For now, you need to go by the following instructions to run the Program using the Terminal. You can also install a development environment like Visual Studio Code wich can be easier
-                    (download the .deb file in the <a href="https://code.visualstudio.com/Download">VS Code Website</a> and run "sudo apt install [path_of_the_downloaded_file].deb" in your Terminal, snap installation will not work).
+                    For now, you need to go by the following instructions to run the Program using the Terminal. You can also install a development environment like Visual Studio Code wich can be easier to use
+                    (download the .deb file on the <a href="https://code.visualstudio.com/Download">VS Code Website</a> and run "sudo apt install [path_of_the_downloaded_file].deb" in your Terminal, snap installation will not work).
                 </i></p>
                 <p><i>Note: This tutorial is made for Ubuntu. It should work for Debian too, but I don't know for other Linux distribution.</i></p>
 
+                <h2>GitHub Preview</h2>
+                    <a href="https://github.com/paulom-s/Scope-Visual-Object-Tracking">Program Source Code (GitHub Repository)</a>
+                    <p><i>If you want, you can see the code without downloading it with the link above (Source Code).</i></p>
+
                 <h2>How to Install</h2>
+                    <p><i>Note: If you have already the Software, installing a new release will overwrite your actual one. If you want to keep it, rename the parent folder (the "S-V-O-T" on your desktop).</i></p>
                     <ul>
-                        <li><h3>1<sup>st</sup> Step:</h3></li>
-                            <p>Install / Update Git and other dependencies with the following command (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install -y git python3.12-venv python3-pip</code>
-                                <p><i>Note: You may have to enter your password. You should see "Installing" or "Already up to date".</i></p>
+                        <li><h3>Downloading the Release</h3></li>
+                            <p>
+                                Go to the <a href="https://github.com/paulom-s/Scope-Visual-Object-Tracking/releases">GitHub Release Page</a> of the software and look for a release you want to install.
+                                Before downloading, read the description of the release to check OS and hardware compatibility. For each version, you can choose between "<i>Software only</i>", "<i>Demo only</i>",
+                                or the "<i>Full</i>" package (See Program Explanation below). If it's compatible, you can download the version you want.
+                            </p>
 
-                        <li><h3>2<sup>nd</sup> Step:</h3></li>
-                            <p>Still in the Linux terminal, enter this command to give the program access to the USB ports (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo usermod -a -G dialout $USER</code>
-                            <p>And then restart your computer (or log out and back in) to apply.</p>
-                                
-                        <li><h3>3<sup>rd</sup> Step:</h3></li>
-                            <p>Then, enter this command to download and install the code (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">git clone https://github.com/paulom-s/Scope-Visual-Object-Tracking.git ~/Desktop/S-V-O-T &&
-                                    cd ~/Desktop/S-V-O-T && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
-                                <p><i>If it doesn't work, make sure you have successfully installed git with "git --version" (it should give you a version number).</i></p>
-
-                        <li><h3>4<sup>th</sup> Step:</h3></li>
-                            <p><strong>If you have installed VS Code:</strong></p>
-                                <p>Enter "<i>code .</i>" in the Terminal to open the folder in VS Code.</p>
-
-                        <li><h3>Updating:</h3></li>
-                            <p>The software is still in development and is updated regularly. In order to always have the latest features or patches you can run this command regularly to update the program (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && git pull origin main</code>
-                                <p><i>Note: You can enter it in both the Linux and VS Code terminal, it doesn't matter.</i></p>
-
-                        <li><h3>Running a Program:</h3></li>
-                            <p>Note: Before running a program, ensure the Virtual Environment is active with this command (click to copy):</p>
-                                <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && source .venv/bin/activate</code>
-                            <p>You need to enter it in the Linux or the VS Code terminal each time you close it. You should see "<i>(.venv)</i>" at the start of the command line.</p>
+                        <li><h3>Preparing the Computer</h3></li>
+                            <p>
+                                Open a new Linux Terminal. Install / Update Python dependencies and give the program access to the USB ports with the following command (click to copy)
+                                and then restart your computer (or log out and back in) to apply:
+                            </p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">sudo apt update && sudo apt install -y python3.12-venv python3-pip && sudo usermod -a -G dialout $USER</code>
+                                <p><i>Note: You may have to enter your password.</i></p>
+                        
+                        <li><h3>Installing the Software</h3></li>
+                            <p>Then, enter this command to install the code (click to copy):</p>
+                                <code onclick="navigator.clipboard.writeText(this.innerText)">unzip -o ~/Downloads/S-V-O-T*.zip "S-V-O-T/*" -d ~/Desktop && rm ~/Downloads/S-V-O-T*.zip && cd ~/Desktop/S-V-O-T && python3 -m venv
+                                    .venv && source .venv/bin/activate && pip install -r requirements.txt</code>
 
                             <p><strong>If you have installed VS Code:</strong></p>
-                                <p>Open VS Code, expand the "<i>/src</i>" folder, click on the "<i>__main__.py</i>" and run it (arrow at the top) to launch the software
-                                    or try the demo programs in the "<i>/demo</i>" folder (see Program Explanation).</p>
-                                
-                            <strong>If you want to run the programs in the Linux Terminal:</strong>
-                                <p>To run a Program, enter "<i>python3 [path_of_the_program].py</i>".</p> 
-                                <p><u>Example:</u> "<i>python3 src/__main__.py</i>" (see Program Explanation).</p>
+                                <p>Enter "<i>code .</i>" in the Terminal to open the folder in VS Code.</p>  
                     </ul>
 
+                <h2>Running a Program</h3>
+                    <p>Note: Before running a program, ensure the Virtual Environment is active with this command (click to copy):</p>
+                        <code onclick="navigator.clipboard.writeText(this.innerText)">cd ~/Desktop/S-V-O-T && source .venv/bin/activate</code>
+                    <p>You need to enter it in the Linux or the VS Code terminal each time you close it. You should see "<i>(.venv)</i>" at the start of the command line.</p>
+
+                    <p><strong>If you have installed VS Code:</strong></p>
+                        <p>Open VS Code, expand the "<i>/src</i>" folder, click on the "<i>__main__.py</i>" and run it (arrow at the top) to launch the software
+                            or try the demo programs in the "<i>/demo</i>" folder (see Program Explanation below).</p>
+                                
+                    <strong>If you want to run the programs in the Linux Terminal:</strong>
+                        <p>To run a Program, enter "<i>python3 [path_of_the_program].py</i>".</p> 
+                        <p><u>Example:</u> "<i>python3 src/__main__.py</i>" (see Program Explanation below).</p>
+
                 <h2>Program Explanation</h2>
+                    <p><i>Note: Depending of the release and version you picked, you may not have all the folders and files.</i></p>
                     <p>
                         When you enter the S-V-O-T folder (or open it in VS Code), you will see different folders: "<i>/.venv</i>", "<i>/data</i>", "<i>/demo</i>", "<i>/src</i>" and "<i>/tests</i>" (this one doesn't matter).
                         You should also have three files: "<i>.gitignore</i>", "<i>README.md</i>" and "<i>requirements.txt</i>".
@@ -95,10 +101,6 @@
                                 <li><i>__main.py__</i>: Main program, that's the one that starts the software.</li>
                             </ul>
                     </ul>
-
-                <h2>GitHub Download</h2>
-                    <a href="https://github.com/paulom-s/Scope-Visual-Object-Tracking">Program Source Code (GitHub Repository)</a>
-                    <p><i>If you want, you can see without downloading or install it manually with the link above (Source Code).</i></p>
  
         </main>
     </body>
