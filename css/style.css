@@ -36,6 +36,7 @@ body {
 }
 
 .sidebar a {
+    display: inline-block;
     color: #a0a0a0;
     text-decoration: none;
     transition: 0.3s;
