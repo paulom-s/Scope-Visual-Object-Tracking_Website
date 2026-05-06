@@ -2,4 +2,4 @@ Website for my [Scope Visual Object Tracking Software](https://github.com/paulom
 
 ***Wiki, How-To-Install, Explanations, Contact and Complementary Informations on my Website:***
 
-[S-V-O-T Wiki](https://paulom-s.github.io/Scope-Visual-Object-Tracking_Website/)
+[S-V-O-T_Website](https://paulom-s.github.io/Scope-Visual-Object-Tracking_Website/)
